@@ -18,7 +18,7 @@ func init() {
 }
 
 func TestVideoServiceUpload(t *testing.T) {
-
+	t.Log("Say bye")
 	video, repo := prepare()
 
 	videoService := services.NewVideoService()
@@ -43,4 +43,5 @@ func TestVideoServiceUpload(t *testing.T) {
 
 	result := <-doneUpload
 	require.Equal(t, result, "upload completed")
+
 }

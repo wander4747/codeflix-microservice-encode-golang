@@ -39,7 +39,7 @@ func (vu *VideoUpload) UploadObject(objectPath string, client *storage.Client, c
 	defer file.Close()
 
 	wc := client.Bucket(vu.OutputBucket).Object(path[1]).NewWriter(ctx)
-	wc.ACL = []storage.ACLRule{{Entity: storage.AllUsers, Role: storage.RoleReader}}
+	//wc.ACL = []storage.ACLRule{{Entity: storage.AllUsers, Role: storage.RoleReader}}
 
 	if _, err = io.Copy(wc, file); err != nil {
 		return err
