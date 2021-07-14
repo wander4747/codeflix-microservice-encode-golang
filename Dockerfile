@@ -33,6 +33,9 @@ RUN cd /tmp \
 # Cleanup.
 RUN rm -rf /var/cache/apk/* /tmp/*
 
+RUN apk update \
+    && apk add --upgrade sqlite
+
 WORKDIR /go/src
 
 ENTRYPOINT ["tail", "-f", "/dev/null"]
