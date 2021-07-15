@@ -13,4 +13,5 @@ require (
 	github.com/satori/go.uuid v1.2.0
 	github.com/streadway/amqp v1.0.0
 	github.com/stretchr/testify v1.7.0
+	gorm.io/gorm v1.21.12
 )
